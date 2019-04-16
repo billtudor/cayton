@@ -4,16 +4,31 @@
 	You can assume the presence in the code base of a getRandomNumber() function, reported below, that returns 
 	a Promise which will resolve with the generated random number. 
 */
-
+var total = 1;
 $( document ).ready(function() {
 
-    $("#x").click(function () {
-    	y =getRandomNumber();
-        console.log("x clicked" && y);
+    $("#testProduct").click(function () {
+    	
+    	var numProducts = 3;
+    	
+    	for (i = 0; i < numProducts; i++) {
+
+    		y =getRandomNumber();
+
+    		y.then(function(value) {
+    			
+  				product(value);
+  				
+			});
+		}
+
+   		console.log(product(1));
     });
 
-	function product(numReq) {
-		console.log("numReq");
+
+	function product(v) {
+		total = total * v;
+		console.log(total);
 	}
 
 	function getRandomNumber() {

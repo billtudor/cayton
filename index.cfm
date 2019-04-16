@@ -15,7 +15,7 @@
 	<div class="container-fluid">
 		<div class="row-fluid margintop5">
 			<cfoutput>
-			<input type="button" id="x" value="3 Products" >
+			<input type="button" id="testProduct" value="3 Products" >
 					
 <!---				<h4>Cf Q1 answer</h4><p>#Cf_q1([{tokenUuid=createUUID(),RequestTime=DateAdd("h",-4,Now()),errorCode=1}
 											,{tokenUuid=createUUID(),RequestTime=DateAdd("h",-2,Now()),errorCode=1}])# </p>
