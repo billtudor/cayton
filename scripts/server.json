@@ -1,0 +1,39 @@
+{
+    "name":"cayton",
+    "openBrowser":true,
+    "openBrowserURL":"/index.cfm",
+    "startTimeout":240,
+    "debug":false,
+    "trace":false,
+    "console":false,
+    "trayOptions":[],
+    "jvm":{
+        "heapSize":3072,
+        "minHeapSize":512,
+        "args":"-server -XX:MaxMetaspaceSize=1024m -XX:+UseParallelGC -Xbatch -Duser.language=en -Dorg.apache.coyote.USE_CUSTOM_STATUS_MSG_IN_HEADER=true -Dcoldfusion.jsafe.defaultalgo=FIPS186Random -Dorg.eclipse.jetty.util.log.class=org.eclipse.jetty.util.log.JavaUtilLog"
+    },
+    "web":{
+        "host":"cmdbox.cayton.local",
+        "directoryBrowsing":false,
+        "welcomeFiles":"default.cfm",
+        "webroot":"../",
+        "http":{
+            "enable":true,
+            "port":40011
+        },
+        "rewrites":{
+            "enable":true
+        },
+        "aliases":{
+            "/mxunit":"${ROOT_FRAMEWORKS}\\mxunit",
+            "/mockbox":"${ROOT_FRAMEWORKS}\\mockbox"
+        }
+    },
+    "app":{
+        "libDirs":"lib",
+        "cfengine":"adobe@2016.0.07+311392",
+        "restMappings":"/nativerest/*,/nativeapi/*"
+    },
+    "cfconfigFile":".cfconfig.json",
+    "all":true
+}
