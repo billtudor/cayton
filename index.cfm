@@ -1,16 +1,43 @@
 <!---Built using CommandBox: http://cmdbox.cayton.local:40011/CFIDE/administrator/index.cfm--->
-<cfoutput>
-	<cfset setLocale("English (UK)") />
-	
-	<p>Cf Q1 answer = #Cf_q1([{tokenUuid=createUUID(),RequestTime=DateAdd("h",-4,Now()),errorCode=1}
-								,{tokenUuid=createUUID(),RequestTime=DateAdd("h",-2,Now()),errorCode=1}])# </p>
-	<p>Cf Q2 answer = #Cf_q2("01/01/2000")#</p>
+<cfset setLocale("English (UK)") />
 
-	<p>Cf Q3 answer = #Cf_q3()# </p>
+<head>
+	<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/jquery-ui-1.8.7.custom.css" />
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row-fluid margintop5">
+			<h2>Cf & JS Test questions answered...</h2>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row-fluid margintop5">
+			<cfoutput>
+			<input type="button" id="x" value="3 Products" >
+					
+<!---				<h4>Cf Q1 answer</h4><p>#Cf_q1([{tokenUuid=createUUID(),RequestTime=DateAdd("h",-4,Now()),errorCode=1}
+											,{tokenUuid=createUUID(),RequestTime=DateAdd("h",-2,Now()),errorCode=1}])# </p>
+											
+				<h4>Cf Q2 answer</h4><p>#Cf_q2("01/01/2000")#</p>
+			
+				<h4>Cf Q3 answer</h4><p>#Cf_q3()#</p>
+				
+				<h4>SQL Q1 answer</h4><p>#SQL_q1(5)#</p>
+				
+				<h4>SQL Q2 answer</h4><p>#SQL_q2(3)#</p>
+--->			</cfoutput>
+		</div>
+	</div>
+</body>
+<footer>
+	<script type="text/javascript" src="/assets/javascript/bootstrap/jquery.js"></script>
+	<script type="text/javascript" src="/assets/javascript/bootstrap/bootstrap-modal.js"></script>
+	<script type="text/javascript" src="/assets/javascript/bootstrap/bootstrap.min.js"></script>
 	
-	<p>SQL Q1 answer = #SQL_q1(5)# </p>
-	<p>SQL Q2 answer = #SQL_q2(3)# </p>
-</cfoutput>
+	<script type="text/javascript" src="/assets/javascript/seniorJSQ.js"></script>
+</footer>
 
 <cfscript>
 	/*
@@ -82,9 +109,7 @@
 				if ( isPalindrome(formattedDate) ){
 					foundPalindrome = true;
 					attempt = formattedDate;
-					writeOutPut("</br>After " & cnt & " tries I got ");
-					writeOutPut(attempt);
-
+					writeOutPut("After " & cnt & " tries I got #attempt#</br>");
 				}
 						
 				thisDate = newDate;
