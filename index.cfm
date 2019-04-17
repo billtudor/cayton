@@ -17,7 +17,7 @@
 			<cfoutput>
 			<input type="button" id="testProduct" value="3 Products" >
 					
-<!---				<h4>Cf Q1 answer</h4><p>#Cf_q1([{tokenUuid=createUUID(),RequestTime=DateAdd("h",-4,Now()),errorCode=1}
+				<h4>Cf Q1 answer</h4><p>#Cf_q1([{tokenUuid=createUUID(),RequestTime=DateAdd("h",-4,Now()),errorCode=1}
 											,{tokenUuid=createUUID(),RequestTime=DateAdd("h",-2,Now()),errorCode=1}])# </p>
 											
 				<h4>Cf Q2 answer</h4><p>#Cf_q2("01/01/2000")#</p>
@@ -27,7 +27,7 @@
 				<h4>SQL Q1 answer</h4><p>#SQL_q1(5)#</p>
 				
 				<h4>SQL Q2 answer</h4><p>#SQL_q2(3)#</p>
---->			</cfoutput>
+			</cfoutput>
 		</div>
 	</div>
 </body>
