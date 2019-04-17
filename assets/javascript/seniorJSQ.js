@@ -4,7 +4,7 @@
 	You can assume the presence in the code base of a getRandomNumber() function, reported below, that returns 
 	a Promise which will resolve with the generated random number. 
 */
-var total = 1;
+var window.total = 1;
 $( document ).ready(function() {
 
     $("#testProduct").click(function () {
@@ -42,13 +42,3 @@ $( document ).ready(function() {
 
 
 });
-
-/* Question 2:
-
-Consider the below MSSQL table structure. Please create and open an example Node JS connection to a MSSQL 
-Server to the point it can be queried.
-Following a succesful connection to the MSSQL Server, please query the below table returning the Users 
-FirstName, LastName and MobileNumber. 
-Output the the resulting dataset to screen or console. 
-
-*/
